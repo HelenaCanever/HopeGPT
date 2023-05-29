@@ -1,0 +1,142 @@
+Estimation de l'empreinte carbone
+
+Déplacements:
+
+-Les émissions pour chaque mode de transport sont calculées comme suit : kms par voyage x nombre de voyages par mois x émissions en grammes par kilomètre x nombre de collaborateurs x durée de la mission en mois
+- Les taux d'émissions en gr per km per personne pour les différents modes de transport sont les suivants :
+Avion=229.92
+TGV=2.36
+Train Intercity=5.92
+Voiture électrique=103.4
+Voiture thermique=217.6
+Voiture thermique=217.6
+RER=7.28
+Metro=2.74
+Bus thermique=112.70
+Vélo ou trottinette à assistance électrique=10.7
+Vélo ou marche=0
+-Si aucune information sur la longueur du trajet n'est donnée, on considère que la distance moyenne entre le domicile et le lieu de travail en Ile-de-france est de 17.2 km. La distance totale parcourue par jour est donc de 34.4 km. 
+Considérez les transports en commun comme le principal mode de transport.
+
+Portables:
+- L'empreinte carbone des ordinateurs dejà en possession est de 4.59 kgCO2eq par année d'utilisation.
+- L'empreinte carbone des ordinateurs reconditionnés ou d'occasion est de 18.45 kgCO2eq plus 1.94 kgCO2eq par année d'utilisation.
+- L'empreinte carbone des ordinateurs neuf est de 134.7 kgCO2eq plus 6.9 kgCO2eq par année d'utilisation.
+- Si aucune information n'est donnée sur le type d'ordinateur portable remis aux consultants, nous supposons qu'il s'agit d'un ordinateur neuf.
+
+Smartphones et téléphones portables:
+- L'empreinte carbone des smartphones dejà en possession est de 4.59 kgCO2eq par année d'utilisation.
+- L'empreinte carbone des smartphones reconditionnés ou d'occasion est de 18.45 kgCO2eq plus 1.94 kgCO2eq par année d'utilisation.
+- L'empreinte carbone des smartphones neuf est de 134.7 kgCO2eq plus 6.9 kgCO2eq par année d'utilisation.
+- Si aucune information n'est donnée sur le type de smartphone remis aux consultants, nous supposons qu'aucun smartphone n'est utilisé et que l'empreinte carbone liée aux smartphones est égale à 0.
+   
+Emails:
+- Nous estimons que l'empreinte carbone d'un courriel sans pièce jointe est de 2,1 grCO2eq, et de 3,4 grCO2eq avec une pièce jointe.
+- Si aucun chiffre n'est donné sur le nombre de courriels envoyés par jour par collaborateur, nous considérons une moyenne de 34 courriels par jour. 
+
+Vidéoconférence:
+- Le taux d'émission par heure de vidéoconférence a été estimé pour les logiciels suivants :
+Microsoft Teams: 30.68 grCO2eq par heure visio+audio, 8.90 grCO2eq par heure audio seulement
+Zoom: 33.22 grCO2eq par heure visio+audio,9.63 grCO2eq par heure audio seulement
+Google Meet: 42.96 grCO2eq par heure visio+audio, 12.46 grCO2eq par heure audio seulement
+Skype: 37.13 grCO2eq par heure visio+audio, 10.78 grCO2eq par heure audio seulement
+Zoho: 29.36 grCO2eq par heure visio+audio, 8.51 grCO2eq par heure audio seulement
+Whereby: 32.14 grCO2eq par heure visio+audio, 9.32 grCO2eq par heure audio seulement
+Jitsi: 36.66 grCO2eq par heure visio+audio, 10.63 grCO2eq par heure audio seulement
+BlueJeans: 39.39 grCO2eq par heure visio+audio, 11.42 grCO2eq par heure audio seulement
+Cisco Webex: 47.44 grCO2eq par heure visio+audio, 13.76 grCO2eq par heure audio seulement
+Go To Meeting: 64.33 grCO2eq par heure visio+audio, 18.66 grCO2eq par heure audio seulement
+Autre/Je ne sais pas: 66 grCO2eq par heure visio+audio, 19.14 grCO2eq par heure audio seulement
+- Si aucune information n'est déductible sur les heures de vidéoconférence par semaine par collaborateur et sur le logiciel, on peut estimer un taux de 19.14grCO2eq par heure et une moyenne de 3.5 heures par semaine par collaborateur.
+
+Stockage:
+- Pour estimer l'empreinte carbone du stockage des données, nous nous sommes basés sur la formule suivante: 
+Emissions stocakge=(g×(n+1)*(d1×d2)))*w/1000*8760*ρ*(f*1000)
+où
+g = Teraoctets par an
+d_1 = durée du projet en ans
+d_2 = conservation des données en années
+w = consommation électrique en watts
+ρ= efficacité de l'utilisation de l'énergie
+f = Facteur d'émission de CO2(metric ton/kWh)
+
+-Vous trouverez ci-dessous des données sur la consommation d'électricité en watts, l'efficacité de l'utilisation de l'énergie et les facteurs d'émission de CO2 par fournisseur de services en nuage et par région:
+,Provider,Region,Location,CO2e (metric ton/kWh),Source,w,p,Country
+0,Google Cloud Storage,us-central1,Iowa,0.000479,Google,0.65,1.1,
+1,Google Cloud Storage,us-east1,South Carolina,0.0005,Google,0.65,1.1,
+2,Google Cloud Storage,us-east4,Northern Virginia,0.000383,Google,0.65,1.1,
+3,Google Cloud Storage,us-west1,Oregon,0.000117,Google,0.65,1.1,
+4,Google Cloud Storage,us-west2,Los Angeles,0.000248,Google,0.65,1.1,
+5,Google Cloud Storage,us-west3,Salt Lake City,0.000561,Google,0.65,1.1,
+6,Google Cloud Storage,us-west4,Las Vegas,0.000491,Google,0.65,1.1,
+7,Google Cloud Storage,asia-east1,Taiwan,0.000541,Google,0.65,1.1,
+8,Google Cloud Storage,asia-east2,Hong Kong,0.000626,Google,0.65,1.1,
+9,Google Cloud Storage,asia-northeast1,Japan,0.000524,Google,0.65,1.1,
+10,Google Cloud Storage,asia-northeast2,Japan,0.000524,Google,0.65,1.1,
+11,Google Cloud Storage,asia-northeast3,South Korea,0.00054,Google,0.65,1.1,
+12,Google Cloud Storage,asia-south1,India,0.000723,Google,0.65,1.1,
+13,Google Cloud Storage,asia-southeast1,Singapore,0.000493,Google,0.65,1.1,
+14,Google Cloud Storage,asia-southeast2,Indonesia,0.000772,Google,0.65,1.1,
+15,Google Cloud Storage,australia-southeast1,Australia,0.000725,Google,0.65,1.1,
+16,Google Cloud Storage,europe-north1,Finland,0.000181,Google,0.65,1.1,
+17,Google Cloud Storage,europe-west1,Belgium,0.000196,Google,0.65,1.1,
+18,Google Cloud Storage,europe-west2,England,0.000257,Google,0.65,1.1,
+19,Google Cloud Storage,europe-west3,Germany,0.000319,Google,0.65,1.1,
+20,Google Cloud Storage,europe-west4,Netherlands,0.000474,Google,0.65,1.1,
+21,Google Cloud Storage,europe-west6,Switzerland,2.9e-05,Google,0.65,1.1,
+22,Google Cloud Storage,northamerica-northeast1,Canada,0.000143,Google,0.65,1.1,
+23,Google Cloud Storage,southamerica-east1,Brazil,0.000109,Google,0.65,1.1,
+24,Amazon S3,us-east-1,,0.000415755,EPA,0.65,1.125,United States
+25,Amazon S3,us-east-2,,0.000440187,EPA,0.65,1.125,United States
+26,Amazon S3,us-west-1,,0.000350861,EPA,0.65,1.125,United States
+27,Amazon S3,us-west-2,,0.000350861,EPA,0.65,1.125,United States
+28,Amazon S3,us-gov-east-1,,0.000415755,EPA,0.65,1.125,United States
+29,Amazon S3,us-gov-west-1,,0.000350861,EPA,0.65,1.125,United States
+30,Amazon S3,af-south-1,,0.000928,carbonfootprint.com,0.65,1.125,South Africa
+31,Amazon S3,ap-east-1,,0.00081,carbonfootprint.com,0.65,1.125,Hong Kong
+32,Amazon S3,ap-south-1,,0.000708,carbonfootprint.com,0.65,1.125,India
+33,Amazon S3,ap-northeast-3,,0.000506,carbonfootprint.com,0.65,1.125,Japan
+34,Amazon S3,ap-northeast-2,,0.0005,carbonfootprint.com,0.65,1.125,South Korea
+35,Amazon S3,ap-southeast-1,,0.0004085,EMA Singapore,0.65,1.125,Singapore
+36,Amazon S3,ap-southeast-2,,0.00079,carbonfootprint.com,0.65,1.125,Australia
+37,Amazon S3,ap-northeast-1,,0.000506,carbonfootprint.com,0.65,1.125,Japan
+38,Amazon S3,ca-central-1,,0.00013,carbonfootprint.com,0.65,1.125,Canada
+39,Amazon S3,cn-north-1,,0.000555,carbonfootprint.com,0.65,1.125,China
+40,Amazon S3,cn-northwest-1,,0.000555,carbonfootprint.com,0.65,1.125,China
+41,Amazon S3,eu-central-1,,0.000338,EEA,0.65,1.125,Germany
+42,Amazon S3,eu-west-1,,0.000316,EEA,0.65,1.125,Ireland
+43,Amazon S3,eu-west-2,,0.000228,EEA,0.65,1.125,England
+44,Amazon S3,eu-south-1,,0.000233,EEA,0.65,1.125,Italy
+45,Amazon S3,eu-west-3,,5.2e-05,EEA,0.65,1.125,France
+46,Amazon S3,eu-north-1,,8e-06,EEA,0.65,1.125,Sweden
+47,Amazon S3,me-south-1,,0.000732,carbonfootprint.com,0.65,1.125,Bahrain
+48,Amazon S3,sa-east-1,,7.4e-05,carbonfootprint.com,0.65,1.125,Brazil
+49,Azure Blob,Central US,Iowa,0.00047223,EPA,0.65,1.125,
+50,Azure Blob,East US,Virginia,0.000415755,EPA,0.65,1.125,
+51,Azure Blob,East US 2,Virginia,0.000415755,EPA,0.65,1.125,
+52,Azure Blob,East US 3,Georgia,0.000415755,EPA,0.65,1.125,
+53,Azure Blob,North Central US,Illinois,0.000440187,EPA,0.65,1.125,
+54,Azure Blob,South Central US,Texas,0.000396293,EPA,0.65,1.125,
+55,Azure Blob,West Central US,Wyoming,0.000350861,EPA,0.65,1.125,
+56,Azure Blob,West US,California,0.000350861,EPA,0.65,1.125,
+57,Azure Blob,West US 2,Washington,0.000350861,EPA,0.65,1.125,
+58,Azure Blob,West US 3,Arizona,0.000350861,EPA,0.65,1.125,
+59,Azure Blob,East Asia,Hong Kong,0.00081,carbonfootprint.com,0.65,1.125,
+60,Azure Blob,Southeast Asia,Singapore,0.0004085,EMA Singapore,0.65,1.125,
+61,Azure Blob,North Europe,Ireland,0.000316,EEA,0.65,1.125,
+62,Azure Blob,West Europe,Netherlands,0.00039,EEA,0.65,1.125,
+63,Azure Blob,Central India,Pune,0.000708,carbonfootprint.com,0.65,1.125,
+64,Azure Blob,South India,Chennai,0.000708,carbonfootprint.com,0.65,1.125,
+65,Azure Blob,West India,Mumbai,0.000708,carbonfootprint.com,0.65,1.125,
+66,Azure Blob,UK South,London,0.000228,EEA,0.65,1.125,
+67,Azure Blob,UK West,Cardiff,0.000228,EEA,0.65,1.125,
+68,OVHcloud,Beauharnois,Beauharnois,0.000165,OVHcloud,0.65,1.2,France
+69,OVHcloud,Gravelines,Gravelines,0.000165,OVHcloud,0.65,1.2,France
+
+-Si aucune information n'est fournie sur l'utilisation du stockage de données en nuage, l'empreinte carbone liée à cette activité est estimée à 0.
+
+
+
+Impressions:
+- Nous estimons que l'empreinte carbone est de 4,68 grCO2eq par feuille de papier.
+- Si aucune information n'est donnée sur le priting pendant la mission, estimez l'empreinte carbone de cette activité à 0.

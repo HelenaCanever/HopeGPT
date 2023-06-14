@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+html, body, [class*="css"] {
+    font-family: 'Montserrat', sans-serif; 
+}
+
+.stButton>button {
+    background-color: #ffffff;
+    color: #3D00F2 !important;
+    padding: 12px 20px !important;
+    width: 300px !important;
+    border: 2px solid #3D00F2 !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    margin:auto !important;
+    text-align: center !important;
+    display: flex !important; 
+}
+  
+.stButton>button:hover {
+    background-color: #3D00F2 !important;
+    color: #ffffff !important;
+    border: 2px solid #3D00F2 !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    margin:auto !important;
+    Text-align: center !important;
+  }
+
+div[data-testid="stVerticalBlock"] div[style*="flex-direction: column;"]:has(div.UpperMarker) div[data-testid="stVerticalBlock"] {
+    background-color: #CFEAFF !important;
+    /* top | right | bottom | left */
+    padding: 12px 12px 12px 12px !important;
+    border-radius: 4px !important;
+
+    
+} 
+
+div[data-testid="stVerticalBlock"] div[style*="flex-direction: column;"]:has(div.LowerMarker) div[data-testid="stVerticalBlock"] {
+    white-space: pre-wrap !important;
+} 
+ 

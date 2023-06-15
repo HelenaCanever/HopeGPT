@@ -75,7 +75,7 @@ enableCORS = false
 
 # Internet address of the server server that the browser should connect to. Can be IP address or DNS name.
 # Default: 'localhost'
-serverAddress = "locahost"
+serverAddress = "localhost"
 
 # Whether to send usage statistics to Streamlit.
 # Default: true
